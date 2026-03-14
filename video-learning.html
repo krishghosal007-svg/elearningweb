@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LearnWithKrish - Video Player" />
+    <title>Learning | LearnWithKrish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 500: '#eab308', 600: '#ca8a04' },
+                        dark: { 800: '#ffffff', 900: '#f8fafc' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex flex-col h-screen bg-slate-50 text-slate-900 overflow-hidden">
+
+    <!-- Topbar Minimal -->
+    <header
+        class="h-16 glass-panel border-b border-slate-200/80 flex items-center justify-between px-6 shrink-0 z-20 backdrop-blur-md">
+        <div class="flex items-center gap-4">
+            <a href="course-details.html"
+                class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="text-sm font-semibold hidden md:block border-l border-slate-200 pl-4">Advanced React JS 2026: The
+                Complete Guide</h1>
+        </div>
+
+        <div class="flex items-center gap-4 animate-fade-in ml-auto">
+            <div
+                class="flex items-center gap-2 text-sm bg-white/90 px-3 py-1.5 rounded-full border border-slate-200">
+                <i class="fa-solid fa-trophy text-brand-600"></i> <span class="text-slate-900 font-medium">12%
+                    Completed</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+
+        <!-- Left Area: Player & Interaction -->
+        <div class="flex-1 flex flex-col h-full bg-slate-100 overflow-y-auto animate-fade-in custom-scrollbar">
+
+            <!-- Video Player Placeholder -->
+            <div
+                class="relative w-full aspect-video bg-slate-50 flex items-center justify-center group overflow-hidden border-b border-slate-800">
+                <!-- Mock Video Background -->
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80"
+                    class="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm" alt="Video BG" />
+
+                <!-- Animated Play Button -->
+                <div
+                    class="relative z-10 w-20 h-20 rounded-full bg-brand-500/80 backdrop-blur text-slate-900 flex items-center justify-center text-3xl cursor-pointer hover:scale-110 transition-transform shadow-[0_0_40px_rgba(234,179,8,0.6)]">
+                    <i class="fa-solid fa-play ml-2"></i>
+                </div>
+
+                <!-- Video Controls Bar Overlay -->
+                <div
+                    class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-100/90 to-transparent flex items-end px-4 pb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-full flex items-center gap-4 text-slate-900 text-sm">
+                        <i class="fa-solid fa-pause cursor-pointer hover:text-brand-600"></i>
+                        <div class="text-xs font-medium">04:12 / 15:20</div>
+                        <div class="flex-1 h-1.5 bg-slate-600 rounded-full cursor-pointer relative">
+                            <div class="absolute top-0 left-0 h-full bg-brand-500 rounded-full w-[25%]"></div>
+                            <div
+                                class="absolute top-1/2 left-[25%] w-3 h-3 bg-white rounded-full -translate-y-1/2 -translate-x-1/2 shadow">
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-volume-high cursor-pointer hover:text-brand-600"></i>
+                        <i class="fa-solid fa-gear cursor-pointer hover:text-brand-600"></i>
+                        <i class="fa-solid fa-expand cursor-pointer hover:text-brand-600"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Details below player -->
+            <div class="p-6 md:p-10 max-w-5xl w-full mx-auto">
+                <h2 class="text-2xl font-bold mb-2">2. Components Deep Dive</h2>
+                <div class="flex items-center justify-between border-b border-slate-800 pb-6 mb-6">
+                    <div class="flex items-center gap-3">
+                        <img src="krish.jpg" alt="Krish" class="w-10 h-10 rounded-full" />
+                        <div>
+                            <p class="text-sm font-semibold">Krish Ghosal</p>
+                            <p class="text-xs text-slate-600">Senior Instructor</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="px-4 py-2 rounded-lg bg-white hover:bg-slate-200 text-slate-700 transition-colors text-sm font-medium flex items-center gap-2">
+                            <i class="fa-regular fa-bookmark"></i> Save
+                        </button>
+                        <button
+                            class="px-4 py-2 rounded-lg bg-white hover:bg-slate-200 text-slate-700 transition-colors text-sm font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Completion Checkbox Toggle -->
+                <label
+                    class="flex items-center gap-3 p-4 rounded-xl bg-white/60 border border-slate-200 cursor-pointer w-fit hover:bg-white transition-colors group">
+                    <input type="checkbox"
+                        class="w-5 h-5 rounded border-slate-300 text-brand-600 focus:ring-brand-500 bg-slate-50 cursor-pointer accent-brand-500"
+                        id="mark-complete" />
+                    <span class="text-sm font-medium text-slate-700 group-hover:text-slate-900">Mark as complete</span>
+                </label>
+
+                <!-- Description text -->
+                <div class="mt-8 text-slate-600 text-sm leading-relaxed space-y-4">
+                    <p>In this lesson, we break down React components to the atomic level. We explore functional
+                        components, props, and how to structure a large application to maximize reusability.</p>
+                    <p><strong>Resources:</strong></p>
+                    <ul class="list-disc pl-5">
+                        <li><a href="#" class="text-brand-600 hover:underline">Download Source Code.zip (2.4mb)</a></li>
+                        <li><a href="#" class="text-brand-600 hover:underline">Component Lifecycle PDF Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar: Module Navigation -->
+        <div
+            class="w-full lg:w-96 glass-panel border-l border-slate-200/80 flex flex-col h-full z-10 animate-fade-in delay-200">
+            <div class="p-4 border-b border-slate-200 flex justify-between items-center bg-white/80">
+                <h3 class="font-bold text-lg">Course Content</h3>
+                <span class="text-xs bg-brand-500/20 text-brand-600 px-2 py-1 rounded">2/45</span>
+            </div>
+
+            <div class="flex-1 overflow-y-auto custom-scrollbar">
+
+                <!-- Nav Sections Accordion -->
+                <div class="border-b border-slate-200/80">
+                    <button
+                        class="w-full flex items-center justify-between p-4 bg-slate-100/50 hover:bg-slate-100/80 transition-colors text-left text-sm font-semibold">
+                        <span>1. Introduction</span>
+                        <span><i class="fa-solid fa-chevron-down text-slate-500"></i></span>
+                    </button>
+                </div>
+
+                <div class="border-b border-brand-500/30 bg-slate-100/60">
+                    <button
+                        class="w-full flex items-center justify-between p-4 hover:bg-slate-100/80 transition-colors text-left text-sm font-semibold text-brand-600">
+                        <span>2. React Components & Props</span>
+                        <span><i class="fa-solid fa-chevron-up text-brand-600"></i></span>
+                    </button>
+
+                    <!-- Lectures List inside Section 2 -->
+                    <div class="space-y-1 pb-3">
+                        <!-- completed -->
+                        <a href="#"
+                            class="flex items-start gap-3 p-3 mx-2 rounded-lg hover:bg-white/80 transition-colors text-sm group">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                            <div class="flex-1">
+                                <p class="font-medium text-slate-700 group-hover:text-slate-900 transition-colors">Setup &
+                                    Boilerplate</p>
+                                <p class="text-xs text-slate-500 mt-1 flex items-center gap-1"><i
+                                        class="fa-regular fa-clock"></i> 05:40</p>
+                            </div>
+                        </a>
+
+                        <!-- active play -->
+                        <a href="#"
+                            class="flex items-start gap-3 p-3 mx-2 rounded-lg bg-brand-500/10 border border-brand-500/30 transition-colors text-sm">
+                            <i class="fa-solid fa-circle-play text-brand-600 mt-1 animate-pulse"></i>
+                            <div class="flex-1">
+                                <p class="font-bold text-brand-600">Components Deep Dive</p>
+                                <p class="text-xs text-brand-500 mt-1 flex items-center gap-1"><i
+                                        class="fa-regular fa-clock"></i> 15:20</p>
+                            </div>
+                        </a>
+
+                        <!-- incomplete -->
+                        <a href="#"
+                            class="flex items-start gap-3 p-3 mx-2 rounded-lg hover:bg-white/80 transition-colors text-sm group opacity-70 hover:opacity-100">
+                            <i class="fa-regular fa-circle text-slate-500 mt-1"></i>
+                            <div class="flex-1">
+                                <p class="font-medium text-slate-700 group-hover:text-slate-900 transition-colors">Passing
+                                    Data with Props</p>
+                                <p class="text-xs text-slate-500 mt-1 flex items-center gap-1"><i
+                                        class="fa-regular fa-clock"></i> 22:10</p>
+                            </div>
+                        </a>
+
+                        <a href="#"
+                            class="flex items-start gap-3 p-3 mx-2 rounded-lg hover:bg-white/80 transition-colors text-sm group opacity-70 hover:opacity-100">
+                            <i class="fa-regular fa-circle text-slate-500 mt-1"></i>
+                            <div class="flex-1">
+                                <p class="font-medium text-slate-700 group-hover:text-slate-900 transition-colors">Prop
+                                    Types & Defaults</p>
+                                <p class="text-xs text-slate-500 mt-1 flex items-center gap-1"><i
+                                        class="fa-regular fa-clock"></i> 11:35</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border-b border-slate-200/80">
+                    <button
+                        class="w-full flex items-center justify-between p-4 bg-slate-100/50 hover:bg-slate-100/80 transition-colors text-left text-sm font-semibold">
+                        <span>3. State & Lifecycle</span>
+                        <span><i class="fa-solid fa-chevron-down text-slate-500"></i></span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Controls Footer -->
+            <div class="p-4 border-t border-slate-200 bg-white/90 backdrop-blur flex justify-between gap-3">
+                <button
+                    class="flex-1 py-2 rounded-lg bg-slate-200 hover:bg-slate-600 text-slate-900 font-medium text-sm transition-colors opacity-50 cursor-not-allowed">
+                    <i class="fa-solid fa-arrow-left mr-1"></i> Prev
+                </button>
+                <button
+                    class="flex-1 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-slate-900 font-medium text-sm transition-colors shadow-lg shadow-brand-500/30">
+                    Next <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

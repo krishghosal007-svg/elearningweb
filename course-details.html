@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LearnWithKrish - Course Details" />
+    <title>Course Details | LearnWithKrish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 500: '#eab308', 600: '#ca8a04' },
+                        dark: { 800: '#ffffff', 900: '#f8fafc' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex h-screen bg-slate-50 text-slate-900 overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside
+        class="w-20 lg:w-64 glass-panel border-r border-slate-200/80 flex flex-col justify-between py-6 transition-all duration-300">
+        <div>
+            <div class="px-6 pb-8 flex items-center gap-3 cursor-pointer" onclick="window.location.href='index.html'">
+                <div
+                    class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center shadow-lg shadow-yellow-500/30">
+                    <i class="fa-solid fa-graduation-cap text-xl text-slate-900"></i>
+                </div>
+                <h1 class="text-xl font-bold hidden lg:block tracking-tight text-slate-900">LearnWith<span
+                        class="text-brand-600">Krish</span></h1>
+            </div>
+
+            <nav class="space-y-2 px-3">
+                <a href="index.html"
+                    class="flex items-center gap-4 px-3 py-3 rounded-lg text-slate-600 hover:bg-white hover:text-slate-900 transition-colors">
+                    <i class="fa-solid fa-compass text-lg w-5 text-center"></i>
+                    <span class="font-medium hidden lg:block">Explore Courses</span>
+                </a>
+                <a href="dashboard.html"
+                    class="flex items-center gap-4 px-3 py-3 rounded-lg text-slate-600 hover:bg-white hover:text-slate-900 transition-colors">
+                    <i class="fa-solid fa-chart-pie text-lg w-5 text-center"></i>
+                    <span class="font-medium hidden lg:block">Dashboard</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-4 px-3 py-3 rounded-lg text-slate-600 hover:bg-white hover:text-slate-900 transition-colors">
+                    <i class="fa-regular fa-bookmark text-lg w-5 text-center"></i>
+                    <span class="font-medium hidden lg:block">My Learning</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-y-auto relative">
+
+        <!-- Topbar -->
+        <header
+            class="h-20 glass-panel border-b border-slate-200/50 flex items-center justify-between px-8 sticky top-0 z-20 backdrop-blur-md">
+            <div class="flex items-center gap-4 animate-fade-in">
+                <a href="index.html"
+                    class="text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Courses
+                </a>
+            </div>
+
+            <div class="flex items-center gap-4 animate-fade-in ml-auto">
+                <button
+                    class="w-10 h-10 rounded-full bg-white/80 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-500 transition-all relative">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-slate-900"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="p-8 max-w-7xl mx-auto w-full flex-grow">
+
+            <!-- Video Preview Header/Banner -->
+            <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden relative mb-8 animate-fade-in group">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="Course Banner"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <div class="absolute inset-0 bg-white/80 flex items-center justify-center">
+                    <button
+                        class="w-20 h-20 rounded-full bg-brand-500/90 text-slate-900 flex items-center justify-center text-3xl hover:bg-brand-500 hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(234,179,8,0.5)] z-10">
+                        <i class="fa-solid fa-play ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Left Column: Details -->
+                <div class="lg:col-span-2 space-y-8 animate-fade-in delay-100">
+
+                    <!-- Header Info -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="px-3 py-1 rounded bg-brand-500/20 text-brand-600 text-xs font-bold uppercase tracking-wide">Development</span>
+                            <span class="flex items-center gap-1 text-slate-600 text-sm"><i
+                                    class="fa-solid fa-chart-simple"></i> Advanced</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Advanced React JS 2026: The Complete
+                            Guide</h1>
+                        <p class="text-slate-600 text-lg leading-relaxed">Dive deep into React, Redux, Context API,
+                            Hooks, and modern web development practices. Build real-world enterprise applications from
+                            scratch.</p>
+
+                        <div class="flex flex-wrap items-center gap-6 mt-6 border-b border-slate-200/80 pb-6">
+                            <div class="flex items-center gap-2">
+                                <img src="krish.jpg" alt="Krish Ghosal"
+                                    class="w-10 h-10 rounded-full border-2 border-slate-200" />
+                                <div>
+                                    <p class="text-sm font-semibold text-slate-900">Krish Ghosal</p>
+                                    <p class="text-xs text-slate-600">Senior Web Engineer</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-700">
+                                <i class="fa-solid fa-star text-amber-400"></i>
+                                <span class="font-bold text-slate-900">4.8</span>
+                                <span class="text-slate-500 text-sm">(12,450 ratings)</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-700 text-sm">
+                                <i class="fa-solid fa-users text-brand-600"></i> 45,200 Students
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Course Description</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            This course is the most comprehensive guide to React JS. Whether you are a beginner or a
+                            seasoned developer looking to upgrade your skills, this course covers everything from basics
+                            to advanced patterns.
+                        </p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-600 mt-1"></i>
+                                Build modern single-page applications.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-600 mt-1"></i>
+                                Master React Hooks & Context.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-600 mt-1"></i>
+                                Implement Redux Toolkit for state management.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-600 mt-1"></i>
+                                Learn Next.js basics for SSR.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module Breakdown -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Course Content</h3>
+                        <div class="space-y-4">
+
+                            <!-- Accordion Item 1 -->
+                            <div class="glass-panel border-slate-200/80 rounded-xl overflow-hidden">
+                                <button
+                                    class="w-full flex items-center justify-between p-4 bg-white/50 hover:bg-slate-100/80 transition-colors text-left">
+                                    <span class="font-semibold text-slate-900">1. Introduction to React 18</span>
+                                    <div class="flex items-center gap-4">
+                                        <span class="text-xs text-slate-600">4 lectures • 45m</span>
+                                        <i class="fa-solid fa-chevron-down text-slate-600"></i>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <!-- Accordion Item 2 -->
+                            <div class="glass-panel border-slate-200/80 rounded-xl overflow-hidden border-brand-500/30">
+                                <button
+                                    class="w-full flex items-center justify-between p-4 bg-white/50 hover:bg-slate-100/80 transition-colors text-left">
+                                    <span class="font-semibold text-slate-900">2. React Components & Props</span>
+                                    <div class="flex items-center gap-4">
+                                        <span class="text-xs text-slate-600">6 lectures • 1h 20m</span>
+                                        <i class="fa-solid fa-chevron-up text-brand-600"></i>
+                                    </div>
+                                </button>
+                                <div class="p-4 bg-slate-100/80 border-t border-slate-200/80 space-y-3">
+                                    <div
+                                        class="flex items-center justify-between text-sm py-2 hover:bg-white/80 rounded px-2 cursor-pointer transition-colors group">
+                                        <span class="flex items-center gap-3 text-slate-700 group-hover:text-slate-900">
+                                            <i class="fa-regular fa-circle-play text-brand-600"></i> Components Deep
+                                            Dive
+                                        </span>
+                                        <span class="text-slate-500">15:20</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-sm py-2 hover:bg-white/80 rounded px-2 cursor-pointer transition-colors group">
+                                        <span class="flex items-center gap-3 text-slate-700 group-hover:text-slate-900">
+                                            <i class="fa-regular fa-circle-play text-slate-500"></i> Passing Data with
+                                            Props
+                                        </span>
+                                        <span class="text-slate-500">22:10</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 3 -->
+                            <div class="glass-panel border-slate-200/80 rounded-xl overflow-hidden">
+                                <button
+                                    class="w-full flex items-center justify-between p-4 bg-white/50 hover:bg-slate-100/80 transition-colors text-left">
+                                    <span class="font-semibold text-slate-900">3. State Management & Hooks</span>
+                                    <div class="flex items-center gap-4">
+                                        <span class="text-xs text-slate-600">8 lectures • 2h 10m</span>
+                                        <i class="fa-solid fa-chevron-down text-slate-600"></i>
+                                    </div>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Action Card -->
+                <div class="lg:col-span-1 animate-fade-in delay-200">
+                    <div class="sticky top-28 glass-panel border-slate-300/80 rounded-2xl p-6 shadow-2xl">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-2">$89.99 <span
+                                class="text-lg text-slate-600 line-through decoration-slate-500 font-normal">$199.99</span>
+                        </h2>
+                        <p class="text-sm text-brand-600 font-medium mb-6">55% off applied</p>
+
+                        <!-- Progress visualization (if logged in/enrolled) -->
+                        <div class="mb-6 p-4 rounded-xl bg-white/80 border border-slate-200">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-700 font-medium">Your Progress</span>
+                                <span class="text-brand-600 font-bold">12%</span>
+                            </div>
+                            <div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-500 progress-bar-fill rounded-full" style="width: 12%;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="space-y-3 mb-6">
+                            <a href="video-learning.html"
+                                class="w-full flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-slate-900 font-medium py-3 px-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-brand-500/30">
+                                Continue Learning <i class="fa-solid fa-play text-sm"></i>
+                            </a>
+                            <button
+                                class="w-full flex items-center justify-center gap-2 bg-transparent border-2 border-slate-300 hover:border-brand-600 text-slate-900 font-medium py-3 px-4 rounded-xl transition-all">
+                                Add to Cart
+                            </button>
+                        </div>
+
+                        <!-- Meta details -->
+                        <div class="space-y-4 text-sm text-slate-600 border-t border-slate-200/80 pt-6">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-regular fa-clock w-5 text-center text-slate-700"></i> 12 hours 30 mins
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-mobile-screen w-5 text-center text-slate-700"></i> Access on
+                                Mobile & TV
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-certificate w-5 text-center text-slate-700"></i> Certificate of
+                                completion
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-infinity w-5 text-center text-slate-700"></i> Full lifetime access
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

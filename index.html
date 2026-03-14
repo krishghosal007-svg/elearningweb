@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LearnWithKrish - Modern E-Learning Platform" />
+  <title>LearnWithKrish | Courses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#eab308', 600: '#ca8a04' },
+            dark: { 800: '#ffffff', 900: '#f8fafc' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="flex h-screen bg-slate-50 text-slate-900 overflow-hidden">
+
+  <!-- Sidebar -->
+  <aside
+    class="w-20 lg:w-64 glass-panel border-r border-slate-200/80 flex flex-col justify-between py-6 transition-all duration-300">
+    <div>
+      <div class="px-6 pb-8 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center shadow-lg shadow-yellow-500/30">
+          <i class="fa-solid fa-graduation-cap text-xl text-slate-900"></i>
+        </div>
+        <h1 class="text-xl font-bold hidden lg:block tracking-tight text-slate-900">LearnWith<span
+            class="text-brand-600">Krish</span></h1>
+      </div>
+
+      <nav class="space-y-2 px-3">
+        <a href="index.html"
+          class="flex items-center gap-4 px-3 py-3 rounded-lg bg-brand-500/10 text-brand-600 border border-brand-500/20 transition-colors">
+          <i class="fa-solid fa-compass text-lg w-5 text-center"></i>
+          <span class="font-medium hidden lg:block">Explore Courses</span>
+        </a>
+        <a href="dashboard.html"
+          class="flex items-center gap-4 px-3 py-3 rounded-lg text-slate-600 hover:bg-white hover:text-slate-900 transition-colors">
+          <i class="fa-solid fa-chart-pie text-lg w-5 text-center"></i>
+          <span class="font-medium hidden lg:block">Dashboard</span>
+        </a>
+        <a href="#"
+          class="flex items-center gap-4 px-3 py-3 rounded-lg text-slate-600 hover:bg-white hover:text-slate-900 transition-colors">
+          <i class="fa-regular fa-bookmark text-lg w-5 text-center"></i>
+          <span class="font-medium hidden lg:block">My Learning</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="px-5">
+      <div class="flex items-center gap-3 hover:bg-white p-2 rounded-lg cursor-pointer transition-colors">
+        <img src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="Profile"
+          class="w-10 h-10 rounded-full border border-slate-300" />
+        <div class="hidden lg:block">
+          <p class="text-sm font-semibold text-slate-900">Alex Student</p>
+          <p class="text-xs text-slate-600">Pro Member</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col overflow-y-auto">
+    <!-- Topbar -->
+    <header
+      class="h-20 glass-panel border-b border-slate-200/50 flex items-center justify-between px-8 sticky top-0 z-10 backdrop-blur-md">
+      <div class="relative w-full max-w-md hidden md:block group animate-fade-in">
+        <i
+          class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-600 group-focus-within:text-brand-600 transition-colors"></i>
+        <input type="text" placeholder="Search for courses, skills or mentors..."
+          class="w-full bg-white/80 border border-slate-200 text-sm rounded-full pl-11 pr-4 py-2.5 outline-none focus:border-brand-500 focus:bg-white focus:ring-1 focus:ring-brand-500 transition-all placeholder:text-slate-500"
+          id="search-bar" />
+      </div>
+
+      <div class="flex items-center gap-4 animate-fade-in ml-auto">
+        <button
+          class="w-10 h-10 rounded-full bg-white/80 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-500 transition-all relative">
+          <i class="fa-regular fa-bell"></i>
+          <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-slate-900"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <div class="p-8 pb-20 max-w-7xl mx-auto w-full flex-grow">
+
+      <!-- Hero/Banner -->
+      <section class="glass-panel rounded-2xl p-8 mb-10 relative overflow-hidden animate-fade-in border-slate-200/80">
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute right-40 top-10 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl"></div>
+
+        <div class="relative z-10 max-w-xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-semibold uppercase tracking-wider mb-4">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            New Courses Added
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight">Master UI/UX Design & Web
+            Technologies</h2>
+          <p class="text-slate-600 text-lg mb-8 leading-relaxed">Join 10k+ students learning the most demanded skills.
+            Enroll now to start your journey towards excellence.</p>
+          <button
+            class="bg-brand-500 hover:bg-brand-600 text-slate-900 font-medium py-3 px-8 rounded-full shadow-lg shadow-brand-500/30 transition-transform hover:-translate-y-1 flex items-center gap-2">
+            Explore Paths <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Filtering & Grid -->
+      <section>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 animate-fade-in delay-100">
+          <h3 class="text-2xl font-semibold text-slate-900">Popular Courses</h3>
+
+          <!-- Categories -->
+          <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
+            <button
+              class="px-4 py-2 rounded-full bg-brand-500 text-slate-900 text-sm font-medium whitespace-nowrap transition-colors border border-brand-500 category-filter"
+              data-filter="all">All Specs</button>
+            <button
+              class="px-4 py-2 rounded-full bg-white/80 text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-500 text-sm font-medium whitespace-nowrap transition-colors category-filter"
+              data-filter="design">Design</button>
+            <button
+              class="px-4 py-2 rounded-full bg-white/80 text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-500 text-sm font-medium whitespace-nowrap transition-colors category-filter"
+              data-filter="development">Development</button>
+            <button
+              class="px-4 py-2 rounded-full bg-white/80 text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-500 text-sm font-medium whitespace-nowrap transition-colors category-filter"
+              data-filter="business">Business</button>
+          </div>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 animate-fade-in delay-200"
+          id="course-grid">
+
+          <!-- Course Card 1 -->
+          <div
+            class="glass-panel rounded-2xl overflow-hidden hover-scale transition-all-custom flex flex-col group border-slate-200/80 course-card"
+            data-category="development">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80" alt="React Mastery"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-80">
+              </div>
+              <div
+                class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-brand-500/90 backdrop-blur text-slate-900 text-xs font-bold">
+                Bestseller
+              </div>
+              <div
+                class="absolute bottom-3 right-3 px-2 py-1 rounded border border-black/10 bg-white/80 backdrop-blur text-slate-900 text-xs font-medium flex items-center gap-1">
+                <i class="fa-regular fa-clock"></i> 12h 30m
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-brand-600 font-medium mb-2 uppercase tracking-wide">
+                Development
+              </div>
+              <h4
+                class="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-brand-600 transition-colors">
+                Advanced React JS 2026: The Complete Guide</h4>
+              <div class="flex items-center gap-2 mt-auto mb-4">
+                <img src="krish.jpg" alt="Krish" class="w-6 h-6 rounded-full" />
+                <span class="text-sm text-slate-600">Krish Ghosal</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mt-auto">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-bold text-slate-900">4.8</span>
+                  <span class="text-slate-500 text-xs">(12.4k)</span>
+                </div>
+                <a href="course-details.html"
+                  class="px-4 py-2 rounded-lg bg-white hover:bg-brand-500 text-slate-900 text-sm font-medium transition-colors border border-slate-200 hover:border-brand-500">
+                  Enroll
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 2 -->
+          <div
+            class="glass-panel rounded-2xl overflow-hidden hover-scale transition-all-custom flex flex-col group border-slate-200/80 course-card"
+            data-category="design">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="UI/UX Design"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-80">
+              </div>
+              <div
+                class="absolute bottom-3 right-3 px-2 py-1 rounded border border-black/10 bg-white/80 backdrop-blur text-slate-900 text-xs font-medium flex items-center gap-1">
+                <i class="fa-regular fa-clock"></i> 8h 15m
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-pink-400 font-medium mb-2 uppercase tracking-wide">
+                Design
+              </div>
+              <h4
+                class="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-pink-400 transition-colors">
+                Complete Figma UI/UX Fundamentals</h4>
+              <div class="flex items-center gap-2 mt-auto mb-4">
+                <img src="https://i.pravatar.cc/150?u=instructor2" alt="Sarah" class="w-6 h-6 rounded-full" />
+                <span class="text-sm text-slate-600">Sarah Jenkins</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mt-auto">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-bold text-slate-900">4.9</span>
+                  <span class="text-slate-500 text-xs">(8.2k)</span>
+                </div>
+                <a href="course-details.html"
+                  class="px-4 py-2 rounded-lg bg-white hover:bg-brand-500 text-slate-900 text-sm font-medium transition-colors border border-slate-200 hover:border-brand-500">
+                  Enroll
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 3 -->
+          <div
+            class="glass-panel rounded-2xl overflow-hidden hover-scale transition-all-custom flex flex-col group border-slate-200/80 course-card"
+            data-category="business">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Business Strategy"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-80">
+              </div>
+              <div
+                class="absolute bottom-3 right-3 px-2 py-1 rounded border border-black/10 bg-white/80 backdrop-blur text-slate-900 text-xs font-medium flex items-center gap-1">
+                <i class="fa-regular fa-clock"></i> 5h 40m
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-emerald-400 font-medium mb-2 uppercase tracking-wide">
+                Business
+              </div>
+              <h4
+                class="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-emerald-400 transition-colors">
+                Agile Project Management & Scrum</h4>
+              <div class="flex items-center gap-2 mt-auto mb-4">
+                <img src="https://i.pravatar.cc/150?u=instructor3" alt="Mike" class="w-6 h-6 rounded-full" />
+                <span class="text-sm text-slate-600">Mike Roberts</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mt-auto">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-bold text-slate-900">4.6</span>
+                  <span class="text-slate-500 text-xs">(3.1k)</span>
+                </div>
+                <a href="course-details.html"
+                  class="px-4 py-2 rounded-lg bg-white hover:bg-brand-500 text-slate-900 text-sm font-medium transition-colors border border-slate-200 hover:border-brand-500">
+                  Enroll
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 4 -->
+          <div
+            class="glass-panel rounded-2xl overflow-hidden hover-scale transition-all-custom flex flex-col group border-slate-200/80 course-card"
+            data-category="development">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Python Bootcamp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-80">
+              </div>
+              <div
+                class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-rose-500/90 backdrop-blur text-slate-900 text-xs font-bold">
+                Hot
+              </div>
+              <div
+                class="absolute bottom-3 right-3 px-2 py-1 rounded border border-black/10 bg-white/80 backdrop-blur text-slate-900 text-xs font-medium flex items-center gap-1">
+                <i class="fa-regular fa-clock"></i> 22h 10m
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-brand-600 font-medium mb-2 uppercase tracking-wide">
+                Development
+              </div>
+              <h4
+                class="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-brand-600 transition-colors">
+                100 Days of Code: Python Pro Bootcamp</h4>
+              <div class="flex items-center gap-2 mt-auto mb-4">
+                <img src="https://i.pravatar.cc/150?u=instructor4" alt="Angela" class="w-6 h-6 rounded-full" />
+                <span class="text-sm text-slate-600">Angela Yu</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mt-auto">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-bold text-slate-900">4.9</span>
+                  <span class="text-slate-500 text-xs">(45.2k)</span>
+                </div>
+                <a href="course-details.html"
+                  class="px-4 py-2 rounded-lg bg-white hover:bg-brand-500 text-slate-900 text-sm font-medium transition-colors border border-slate-200 hover:border-brand-500">
+                  Enroll
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 5: Web Development -->
+          <div
+            class="glass-panel rounded-2xl overflow-hidden hover-scale transition-all-custom flex flex-col group border-slate-200/80 course-card"
+            data-category="development">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Web Development"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-80">
+              </div>
+              <div
+                class="absolute bottom-3 right-3 px-2 py-1 rounded border border-black/10 bg-white/80 backdrop-blur text-slate-900 text-xs font-medium flex items-center gap-1">
+                <i class="fa-regular fa-clock"></i> 45h 20m
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-brand-600 font-medium mb-2 uppercase tracking-wide">
+                Development
+              </div>
+              <h4
+                class="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-brand-600 transition-colors">
+                The Complete Web Development Bootcamp 2026</h4>
+              <div class="flex items-center gap-2 mt-auto mb-4">
+                <img src="https://i.pravatar.cc/150?u=instructor5" alt="John" class="w-6 h-6 rounded-full" />
+                <span class="text-sm text-slate-600">John Doe</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mt-auto">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-bold text-slate-900">4.7</span>
+                  <span class="text-slate-500 text-xs">(32.1k)</span>
+                </div>
+                <a href="course-details.html"
+                  class="px-4 py-2 rounded-lg bg-white hover:bg-brand-500 text-slate-900 text-sm font-medium transition-colors border border-slate-200 hover:border-brand-500">
+                  Enroll
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 6: Full Stack Web Development -->
+          <div
+            class="glass-panel rounded-2xl overflow-hidden hover-scale transition-all-custom flex flex-col group border-slate-200/80 course-card"
+            data-category="development">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+                alt="Full Stack Web Development"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-80">
+              </div>
+              <div
+                class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-500/90 backdrop-blur text-slate-900 text-xs font-bold">
+                New
+              </div>
+              <div
+                class="absolute bottom-3 right-3 px-2 py-1 rounded border border-black/10 bg-white/80 backdrop-blur text-slate-900 text-xs font-medium flex items-center gap-1">
+                <i class="fa-regular fa-clock"></i> 60h 10m
+              </div>
+            </div>
+            <div class="p-5 flex-1 flex flex-col">
+              <div class="flex items-center gap-2 text-xs text-brand-600 font-medium mb-2 uppercase tracking-wide">
+                Development
+              </div>
+              <h4
+                class="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-brand-600 transition-colors">
+                MERN Stack Front To Back: Full Stack React</h4>
+              <div class="flex items-center gap-2 mt-auto mb-4">
+                <img src="https://i.pravatar.cc/150?u=instructor6" alt="Brad" class="w-6 h-6 rounded-full" />
+                <span class="text-sm text-slate-600">Brad Traversy</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-200/80 pt-4 mt-auto">
+                <div class="flex items-center gap-1 text-amber-400 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="font-bold text-slate-900">4.9</span>
+                  <span class="text-slate-500 text-xs">(18.5k)</span>
+                </div>
+                <a href="course-details.html"
+                  class="px-4 py-2 rounded-lg bg-white hover:bg-brand-500 text-slate-900 text-sm font-medium transition-colors border border-slate-200 hover:border-brand-500">
+                  Enroll
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
