@@ -50,13 +50,7 @@ Visual UI feedback on completion
 
 Run the project
 Simply open index.html in your browser
-📈 Future Improvements
-🔐 User authentication system
-🎥 Video learning module
-🧠 AI-based course recommendations
-💾 Backend integration (Node.js / Firebase)
-📱 Fully responsive mobile optimization
-🤝 Contributing
+
 
 Contributions are welcome!
 
